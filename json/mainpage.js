@@ -35,7 +35,7 @@ function fetchData() {
       test.innerHTML = '';
   
       filteredData.forEach((filterdata) => {
-          const date = filterdata.date.slice(0,10);
+          const date = filterdata.date.slice(5,10);
           const is_garantee = filterdata.is_garantee;
           const is_service = filterdata.is_service_bonus;
           const is_online = filterdata.is_online_bonus;
