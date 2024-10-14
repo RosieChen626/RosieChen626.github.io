@@ -137,19 +137,19 @@ ul.active{
 
 p.first{
     position: absolute;
-    right: 330px;
+    right: 50%;
     min-width: 100px;
 }
 
 p.second{
     position: absolute;
-    right: 190px;
+    right: 30%;
     min-width: 100px;
 }
 
 p.third{
     position: absolute;
-    right: 50px;
+    right: 10%;
     min-width: 100px;
 }
 
