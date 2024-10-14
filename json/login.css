@@ -103,7 +103,7 @@ body{
 	/**box-shadow: -5px -5px 15px rgb(255, 255, 255), 5px 5px 20px rgb(129 154 181 / 43%);***/
     box-shadow: 0 0 6px 6px #eff4ff, 8px 8px 10px 4px rgb(129, 154, 181 , 0.43), -8px -8px 10px 4px rgb(255 255 255);
     width: 50%;
-    min-width: 420px;
+    min-width: 330px;
 }
 .CA
 {
