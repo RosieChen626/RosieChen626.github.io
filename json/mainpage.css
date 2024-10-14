@@ -1,0 +1,156 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	align-items: center;
+	background: #eff4ff;
+	height: 100vh;
+    padding: 20px 20px;
+}
+
+.top{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bxs-user-circle{
+    font-size: 40px;
+}
+
+.bx-menu{
+    margin-bottom: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.bxs-down-arrow{
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+ul.bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    width: 120px;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:inset -2px -2px 6px rgb(59 59 59 / 18%), inset 2px 2px 6px rgb(129 154 181 / 43%);
+    visibility: hidden;
+    cursor: pointer;
+}
+
+ul.active{
+    visibility: visible;
+}
+
+.box{
+    margin-top: 90px;
+}
+
+.item2{
+    top: 60px;
+    right:20px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:inset -2px -2px 6px rgb(59 59 59 / 18%), inset 2px 2px 6px rgb(129 154 181 / 43%);
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.item2.active{
+    visibility: visible;
+}
+
+.main-content{
+    height: 100%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+    background: yellow;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+}
+
+.box-content{
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    gap: 30px;
+    border-radius: 10px;
+	box-shadow: 5px 5px 8px rgb(129, 154, 181 , 0.43), -6px -6px 10px rgb(255 255 255);
+    cursor: pointer;
+}
+
+.title{
+    box-shadow: none;
+    cursor: none;
+}
+
+p.first{
+    position: absolute;
+    right: 330px;
+    min-width: 100px;
+}
+
+p.second{
+    position: absolute;
+    right: 190px;
+    min-width: 100px;
+}
+
+p.third{
+    position: absolute;
+    right: 50px;
+    min-width: 100px;
+}
+
+
