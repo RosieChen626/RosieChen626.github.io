@@ -1,9 +1,127 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body{
-    background: pink;
+	align-items: center;
+	background: #eff4ff;
+	height: 100vh;
+    padding: 20px 20px;
 }
+
+table{
+    width:100%;
+    /* min-width:1100px; */
+    height: 20px;
+    background: #fff;
+    box-shadow: 0 .4rem 1.0rem #0005;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    margin-top:2px;
+    text-align:center;
+  }
+  
+  th{
+    background: #2e3242;
+    color:#fff;
+    height:45px;
+    width: 16.67%;
+    overflow:hidden;
+  }
+  
+  .first_th:first-child{
+    border-top-left-radius: 20px;
+  }
+  
+  .first_th:last-child{
+    border-top-right-radius: 20px;
+  }
+  
+  .last_td:first-child{
+    border-bottom-left-radius: 20px;
+  }
+  
+  .last_td:last-child{
+    border-bottom-right-radius: 20px;
+  }
+  
+  .second_title{
+    background: #585d73;
+    color:#fff;
+    font-weight:600;
+    height: 35px;
+  }
+  
+  
+  td{
+    background-color:#fff;
+    text-align:center;
+    height:25px;
+    width: 16.67%;
+  }
+  
+  td:hover{
+    background-color:#d1d4e0;
+    font-weight:600;
+  }
+  
+  .second_title:hover{
+    background-color:#585d73;
+  }
+
+  
+.accordion{
+    position: absolute;
+    top: 0px;
+    left: -12.5px;
+    width:95%;
+  }
+  
+  .accordion li{
+      list-style: none;
+      width:100%;
+      margin:20px;
+      padding:10px;
+      border-radius: 25px;
+      background:#edf0fa;
+      box-shadow: rgba(237, 240, 250, 0.17) 0px -23px 25px 0px inset, rgba(237, 240, 250, 0.15) 0px -36px 30px 0px inset, rgba(237, 240, 250, 0.1) 0px -79px 40px 0px inset, rgba(237, 240, 250, 0.06) 0px 2px 1px, rgba(237, 240, 250, 0.09) 0px 4px 2px, rgba(237, 240, 250, 0.09) 0px 8px 4px, rgba(237, 240, 250, 0.09) 0px 16px 8px, rgba(237, 240, 250, 0.09) 0px 32px 16px;
+  }
+  
+  .accordion li label{
+      display:flex;
+      align-items: center;
+      padding: 10px;
+      font-weight: 600;
+      cursor: pointer;
+  }
+  
+  label::before{
+      content:"+";
+      margin-right: 10px;
+      font-size:20px;
+      font-weight: 1000px;
+  }
+  
+  .contentuse{
+      display: none;
+  }
+  
+  .accordion .content{
+      color: #555;
+      padding:0 10px;
+      max-height:0;
+      overflow: hidden;
+      transition: max-height 0.5s, padding 0.5s;
+  }
+  
+  .contentuse:checked + label + .content{
+      max-height: 2400px;
+      padding: 10px 10px 20px;
+  }
+  
+  .contentuse:checked + label::before{
+      content:'-';
+  }
