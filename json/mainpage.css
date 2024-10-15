@@ -8,13 +8,12 @@
 body{
 	align-items: center;
 	background: #eff4ff;
-	height: 100vh;
     padding: 20px 20px;
     width: 100%;
 }
 
 .top{
-    height: 110px;
+    height: 130px;
     display: flex;
     justify-content: space-between;
 }
@@ -73,15 +72,7 @@ ul.active{
 }
 
 .box{
-    margin-top: 200px;
-}
-
-.cover{
-    position: fixed;
-    top: 0;
-    left: 20px;
-    right: 20px;
-    z-index: 999px;
+    margin-top: 40px;
 }
 
 .item2{
@@ -165,5 +156,6 @@ p.third{
     right: 5%;
     min-width: 100px;
 }
+
 
 
