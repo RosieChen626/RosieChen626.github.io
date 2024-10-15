@@ -69,6 +69,9 @@ function showData(data) {
     });
 }
 
+const back = document.querySelector('.back');
+back.addEventListener('click',()=>{history.go(-1)});
+
 
 
 
