@@ -150,19 +150,19 @@ ul.active{
 
 p.first{
     position: absolute;
-    right: 50%;
+    right: 45%;
     min-width: 100px;
 }
 
 p.second{
     position: absolute;
-    right: 30%;
+    right: 25%;
     min-width: 100px;
 }
 
 p.third{
     position: absolute;
-    right: 10%;
+    right: 5%;
     min-width: 100px;
 }
 
