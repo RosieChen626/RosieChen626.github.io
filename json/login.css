@@ -122,7 +122,8 @@ body{
     border-radius: 50px;
     margin-right: 3px;
     margin-top: 32px;
-	box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
+    box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
+    cursor: pointer;
 	
 }
 .CA:active
