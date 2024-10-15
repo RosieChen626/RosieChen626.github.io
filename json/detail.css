@@ -133,3 +133,9 @@ table{
   .contentuse:checked + label::before{
       content:'-';
   }
+
+  @media(max-width){
+    body{
+      padding: 20px 20px 20px -20px;
+    }
+  }
