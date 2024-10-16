@@ -105,3 +105,8 @@ openppopup.addEventListener('click',()=>{
 closeppopup.addEventListener('click',()=>{
     popup.classList.remove('active');
 });
+
+const back = document.querySelector('.bx-chevron-left')
+back.addEventListener('click',()=>{
+  history.go(-1);
+})
