@@ -65,105 +65,105 @@ function fetchData() {
     fetchData();
   }
 
-  function getClickID(id, filteredData) {
-    filteredData.forEach((filterdata) => {
-      if(filterdata.id=id){
-        const clickData = filterdata;
-        const idNum = clickData.id;
-        const content = document.getElementById(`content_${idNum}`);
+  function getClickID(this_id, filteredData) {
 
-        //SP2_1資訊
-        const sp2_1 = clickData.sp2_1;
-        const sp2_1_serve_type = clickData.sp2_1_serve_type;
-        const sp2_1_remain_delivering_qty = clickData.sp2_1_remain_delivering_qty;
-        const sp2_1_delivered_cnt = clickData.sp2_1_delivered_cnt;
-        const is_sp2_1_cleaned_solid = clickData.is_sp2_1_cleaned_solid;
-        const is_sp2_1_garantee_bonus = clickData.is_sp2_1_garantee_bonus;
-        const is_sp2_1_cleaned = clickData.is_sp2_1_cleaned;
-        const is_sp2_1_service_bonus = clickData.is_sp2_1_service_bonus;
+    const result = filteredData.filter((dt) => dt.id === parseInt(this_id));
+    const clickData = result[0];
+    console.log(result);
 
-        //SP2_2資訊
-        const sp2_2 = clickData.sp2_2;
-        const sp2_2_serve_type = clickData.sp2_2_serve_type;
-        const sp2_2_remain_delivering_qty = clickData.sp2_2_remain_delivering_qty;
-        const sp2_2_delivered_cnt = clickData.sp2_2_delivered_cnt;
-        const is_sp2_2_cleaned_solid = clickData.is_sp2_2_cleaned_solid;
-        const is_sp2_2_garantee_bonus = clickData.is_sp2_2_garantee_bonus;
-        const is_sp2_2_cleaned = clickData.is_sp2_2_cleaned;
-        const is_sp2_2_service_bonus = clickData.is_sp2_2_service_bonus;
+    const idNum = this_id;
+    const content = document.getElementById(`content_${idNum}`);
 
-        //SP2_4資訊
-        const sp2_4 = clickData.sp2_4;
-        const sp2_4_serve_type = clickData.sp2_4_serve_type;
-        const sp2_4_remain_delivering_qty = clickData.sp2_4_remain_delivering_qty;
-        const sp2_4_delivered_cnt = clickData.sp2_4_delivered_cnt;
-        const is_sp2_4_cleaned_solid = clickData.is_sp2_4_cleaned_solid;
-        const is_sp2_4_garantee_bonus = clickData.is_sp2_4_garantee_bonus;
-        const is_sp2_4_cleaned = clickData.is_sp2_4_cleaned;
-        const is_sp2_4_service_bonus = clickData.is_sp2_4_service_bonus;
+    //SP2_1資訊
+    const sp2_1 = clickData.sp2_1;
+    const sp2_1_serve_type = clickData.sp2_1_serve_type;
+    const sp2_1_remain_delivering_qty = clickData.sp2_1_remain_delivering_qty;
+    const sp2_1_delivered_cnt = clickData.sp2_1_delivered_cnt;
+    const is_sp2_1_cleaned_solid = clickData.is_sp2_1_cleaned_solid;
+    const is_sp2_1_garantee_bonus = clickData.is_sp2_1_garantee_bonus;
+    const is_sp2_1_cleaned = clickData.is_sp2_1_cleaned;
+    const is_sp2_1_service_bonus = clickData.is_sp2_1_service_bonus;
 
-        //出勤資訊
+    //SP2_2資訊
+    const sp2_2 = clickData.sp2_2;
+    const sp2_2_serve_type = clickData.sp2_2_serve_type;
+    const sp2_2_remain_delivering_qty = clickData.sp2_2_remain_delivering_qty;
+    const sp2_2_delivered_cnt = clickData.sp2_2_delivered_cnt;
+    const is_sp2_2_cleaned_solid = clickData.is_sp2_2_cleaned_solid;
+    const is_sp2_2_garantee_bonus = clickData.is_sp2_2_garantee_bonus;
+    const is_sp2_2_cleaned = clickData.is_sp2_2_cleaned;
+    const is_sp2_2_service_bonus = clickData.is_sp2_2_service_bonus;
 
-        const checkin = clickData.checkin.slice(11,19);
-        const working_hours = clickData.working_hours; 
-        const on_time = clickData.on_time;
-        const cleaned_or_hours_hit_standard = clickData.cleaned_or_hours_hit_standard;
-        const absent_cnt= clickData.absent_cnt;
-        const attendance_record = clickData.attendance_record;
-        const workdays = clickData.workdays;
+    //SP2_4資訊
+    const sp2_4 = clickData.sp2_4;
+    const sp2_4_serve_type = clickData.sp2_4_serve_type;
+    const sp2_4_remain_delivering_qty = clickData.sp2_4_remain_delivering_qty;
+    const sp2_4_delivered_cnt = clickData.sp2_4_delivered_cnt;
+    const is_sp2_4_cleaned_solid = clickData.is_sp2_4_cleaned_solid;
+    const is_sp2_4_garantee_bonus = clickData.is_sp2_4_garantee_bonus;
+    const is_sp2_4_cleaned = clickData.is_sp2_4_cleaned;
+    const is_sp2_4_service_bonus = clickData.is_sp2_4_service_bonus;
 
-        //任務品質
+    //出勤資訊
 
-        const smart_inbound = clickData.smart_inbound;
-        const appsheet = clickData.appsheet;
-        const extra_support = clickData.extra_support;
-        
-        //delivered_distinguish
-        const is_garantee_subtotal = clickData.is_garantee_subtotal;
-        const delivered_in_assign_sp2 = clickData.delivered_in_assign_sp2;
-        const garantee_bonus = clickData.garantee_bonus;
-        const support_cnt = clickData.support_cnt;
-        const service_bonus_cnt = clickData.service_bonus_cnt;
-        const actual_delivered = clickData.actual_delivered;
+    const checkin = clickData.checkin;
+    const working_hours = clickData.working_hours; 
+    const on_time = clickData.on_time;
+    const cleaned_or_hours_hit_standard = clickData.cleaned_or_hours_hit_standard;
+    const absent_cnt= clickData.absent_cnt;
+    const attendance_record = clickData.attendance_record;
+    const workdays = clickData.workdays;
 
-        content.innerHTML=`
-        <div>
-          <ul class="accordion">
-          <li><input class="contentuse" type="radio" name="accordion" id="first_${idNum}" checked>
-          <label for="first_${idNum}">保底獎勵</label>
-          <div class="content">
-          <table><tr><th colspan="6" class="first_th">當日總配達顆數 (1+2+3)</th></tr>
-          <tr><td colspan="6">${is_garantee_subtotal}</td></tr>
-          <tr><td></td></tr>
-          <tr><th colspan="2">[1]指定門市配送顆數</th><th colspan="2">[2]保底額外獎勵顆數</th><th colspan="2">[3]支援配送件數</th></tr>
-          <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="2">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
-          <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr>
-          <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
-          <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
-          <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
-          <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned_solid}</td><td>${is_sp2_4_garantee_bonus}</td></tr>
-          <tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">當日是否配合支援</td></tr>
-          <tr><td colspan="3">${smart_inbound}</td><td colspan="3">${extra_support}</td></tr>
-          <tr><td></td></tr><tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累積上線時數</td></tr>
-          <tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr>
-          <tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市上線配送</td></tr>
-          <tr><td colspan="2">${on_time}</td><td colspan="2">${cleaned_or_hours_hit_standard}</td><td colspan="2">${absent_cnt}</td></tr>
-          <tr><td></td></tr><tr><th colspan="6">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當周配送品質累計不佳次數</td><td colspan="3" class="second_title">當周規劃上線天數是否達標</td></tr>
-          <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="3" class="last_td">${workdays}</td></tr></table></div></li>
-          <li><input class="contentuse" type="radio" name="accordion" id="second_${idNum}"><label for="second_${idNum}">服務品質獎勵</label>
-          <div class="content"><table><tr><th colspan="6" class="first_th">服務獎勵結算</th></tr>
-          <tr><td colspan="6">${service_bonus_cnt}</td></tr><tr><td></td></tr>
-          <tr><th colspan="3">實際配送顆數</th><th colspan="3">保底加給(不提供服務獎勵)</th></tr>
-          <tr><td colspan="3">${actual_delivered}</td><td colspan="3">${garantee_bonus}</td></tr>
-          <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
-          <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
-          <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned}</td><td>${is_sp2_4_service_bonus}</td></tr><tr><td></td></tr>
-          <tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="2">${appsheet}</td><td colspan="2">${extra_support}</td></tr>
-          <tr><td></td></tr>
-          <tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累計上線時間</td></tr><tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr><tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市</td></tr>
-          <tr><td colspan="2" class="last_td">${on_time}</td><td colspan="2" class="last_td">${cleaned_or_hours_hit_standard}</td><td colspan="2" class="last_td">${absent_cnt}</td></tr></table></div></li><li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵</label><div class="content"><table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr><tr><td colspan="6">'+online_bonus_summary+'</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送天數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">'+accu_delivered+'</td><td colspan="2">'+accu_online_week+'</td><td colspan="2">'+accu_online_weekend+'</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">'+seq_usagerate_day+'</td><td colspan="3" class="last_td">'+seq_usagerate_week+'</td></tr></table></div></li></ul>
-        </div>
-        `
-      }
-    })
-}
+    //任務品質
+
+    const smart_inbound = clickData.smart_inbound;
+    const appsheet = clickData.appsheet;
+    const extra_support = clickData.extra_support;
+    
+    //delivered_distinguish
+    const is_garantee_subtotal = clickData.is_garantee_subtotal;
+    const delivered_in_assign_sp2 = clickData.delivered_in_assign_sp2;
+    const garantee_bonus = clickData.garantee_bonus;
+    const support_cnt = clickData.support_cnt;
+    const service_bonus_cnt = clickData.service_bonus_cnt;
+    const actual_delivered = clickData.actual_delivered;
+
+    content.innerHTML=`
+    <div>
+      <ul class="accordion">
+      <li><input class="contentuse" type="radio" name="accordion" id="first_${idNum}" checked>
+      <label for="first_${idNum}">保底獎勵</label>
+      <div class="content">
+      <table><tr><th colspan="6" class="first_th">當日總配達顆數 (1+2+3)</th></tr>
+      <tr><td colspan="6">${is_garantee_subtotal}</td></tr>
+      <tr><td></td></tr>
+      <tr><th colspan="2">[1]指定門市配送顆數</th><th colspan="2">[2]保底額外獎勵顆數</th><th colspan="2">[3]支援配送件數</th></tr>
+      <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="2">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
+      <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr>
+      <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
+      <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
+      <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
+      <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned_solid}</td><td>${is_sp2_4_garantee_bonus}</td></tr>
+      <tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">當日是否配合支援</td></tr>
+      <tr><td colspan="3">${smart_inbound}</td><td colspan="3">${extra_support}</td></tr>
+      <tr><td></td></tr><tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累積上線時數</td></tr>
+      <tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr>
+      <tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市上線配送</td></tr>
+      <tr><td colspan="2">${on_time}</td><td colspan="2">${cleaned_or_hours_hit_standard}</td><td colspan="2">${absent_cnt}</td></tr>
+      <tr><td></td></tr><tr><th colspan="6">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當周配送品質累計不佳次數</td><td colspan="3" class="second_title">當周規劃上線天數是否達標</td></tr>
+      <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="3" class="last_td">${workdays}</td></tr></table></div></li>
+      <li><input class="contentuse" type="radio" name="accordion" id="second_${idNum}"><label for="second_${idNum}">服務品質獎勵</label>
+      <div class="content"><table><tr><th colspan="6" class="first_th">服務獎勵結算</th></tr>
+      <tr><td colspan="6">${service_bonus_cnt}</td></tr><tr><td></td></tr>
+      <tr><th colspan="3">實際配送顆數</th><th colspan="3">保底加給(不提供服務獎勵)</th></tr>
+      <tr><td colspan="3">${actual_delivered}</td><td colspan="3">${garantee_bonus}</td></tr>
+      <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
+      <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
+      <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned}</td><td>${is_sp2_4_service_bonus}</td></tr><tr><td></td></tr>
+      <tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="2">${appsheet}</td><td colspan="2">${extra_support}</td></tr>
+      <tr><td></td></tr>
+      <tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累計上線時間</td></tr><tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr><tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市</td></tr>
+      <tr><td colspan="2" class="last_td">${on_time}</td><td colspan="2" class="last_td">${cleaned_or_hours_hit_standard}</td><td colspan="2" class="last_td">${absent_cnt}</td></tr></table></div></li><li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵</label><div class="content"><table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr><tr><td colspan="6">'+online_bonus_summary+'</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送天數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">'+accu_delivered+'</td><td colspan="2">'+accu_online_week+'</td><td colspan="2">'+accu_online_weekend+'</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">'+seq_usagerate_day+'</td><td colspan="3" class="last_td">'+seq_usagerate_week+'</td></tr></table></div></li></ul>
+    </div>
+    `
+  }
