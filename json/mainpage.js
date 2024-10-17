@@ -95,14 +95,14 @@ function fetchData() {
     const is_sp2_2_service_bonus = clickData.is_sp2_2_service_bonus;
 
     //SP2_4資訊
-    const sp2_4 = clickData.sp2_4;
-    const sp2_4_serve_type = clickData.sp2_4_serve_type;
-    const sp2_4_remain_delivering_qty = clickData.sp2_4_remain_delivering_qty;
-    const sp2_4_delivered_cnt = clickData.sp2_4_delivered_cnt;
-    const is_sp2_4_cleaned_solid = clickData.is_sp2_4_cleaned_solid;
-    const is_sp2_4_garantee_bonus = clickData.is_sp2_4_garantee_bonus;
-    const is_sp2_4_cleaned = clickData.is_sp2_4_cleaned;
-    const is_sp2_4_service_bonus = clickData.is_sp2_4_service_bonus;
+    const sp2_3 = clickData.sp2_3;
+    const sp2_3_serve_type = clickData.sp2_3_serve_type;
+    const sp2_3_remain_delivering_qty = clickData.sp2_3_remain_delivering_qty;
+    const sp2_3_delivered_cnt = clickData.sp2_3_delivered_cnt;
+    const is_sp2_3_cleaned_solid = clickData.is_sp2_3_cleaned_solid;
+    const is_sp2_3_garantee_bonus = clickData.is_sp2_3_garantee_bonus;
+    const is_sp2_3_cleaned = clickData.is_sp2_3_cleaned;
+    const is_sp2_3_service_bonus = clickData.is_sp2_3_service_bonus;
 
     //出勤資訊
 
@@ -152,7 +152,7 @@ function fetchData() {
       <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
       <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
       <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
-      <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned_solid}</td><td>${is_sp2_4_garantee_bonus}</td></tr>
+      <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
       <tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">當日是否配合支援</td></tr>
       <tr><td colspan="3">${smart_inbound}</td><td colspan="3">${extra_support}</td></tr>
       <tr><td></td></tr><tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累積上線時數</td></tr>
@@ -168,7 +168,7 @@ function fetchData() {
       <tr><td colspan="3">${actual_delivered}</td><td colspan="3">${garantee_bonus}</td></tr>
       <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
       <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
-      <tr><td>${sp2_4}</td><td>${sp2_4_serve_type}</td><td>${sp2_4_remain_delivering_qty}</td><td>${sp2_4_delivered_cnt}</td><td>${is_sp2_4_cleaned}</td><td>${is_sp2_4_service_bonus}</td></tr><tr><td></td></tr>
+      <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
       <tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="2">${appsheet}</td><td colspan="2">${extra_support}</td></tr>
       <tr><td></td></tr>
       <tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累計上線時間</td></tr><tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr><tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市</td></tr>
