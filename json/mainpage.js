@@ -134,8 +134,8 @@ function fetchData() {
     const accu_delivered = clickData.accu_delivered;
     const accu_workdays = clickData.accu_workdays;
     const accu_workdays_in_weekend = clickData.accu_workdays_in_weekend;
-    const seq_usage_day = parseFloat(clickData.seq_usage_day*100)+ "%";
-    const seq_usage_w = parseFloat(clickData.seq_usage_w*100) + "%";
+    const seq_usage_day = parseFloat(clickData.seq_usage_day*100).toFixed(2) + "%";
+    const seq_usage_w = parseFloat(clickData.seq_usage_w*100).toFixed(2)  + "%";
 
     content.innerHTML=`
     <div>
