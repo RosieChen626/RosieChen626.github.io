@@ -278,4 +278,16 @@ table{
     visibility: visible;
   }
 
+  @media(max-width:550px){
+    th{
+        font-size: 13px;
+    }
+    td{
+        font-size: 12px;
+    }
+    .second_title{
+        font-size: 12px;
+    }
+  }
+
 
