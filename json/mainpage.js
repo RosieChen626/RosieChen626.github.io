@@ -106,7 +106,7 @@ function fetchData() {
 
     //出勤資訊
 
-    const checkin = clickData.checkin;
+    const checkin = clickData.checkin.slice(11,19);
     const working_hours = clickData.working_hours; 
     const on_time = clickData.on_time;
     const cleaned_or_hours_hit_standard = clickData.cleaned_or_hours_hit_standard;
@@ -127,6 +127,15 @@ function fetchData() {
     const support_cnt = clickData.support_cnt;
     const service_bonus_cnt = clickData.service_bonus_cnt;
     const actual_delivered = clickData.actual_delivered;
+
+    //上線獎勵
+
+    const online_bonus_subtotal = clickData.online_bonus_subtotal;
+    const accu_delivered = clickData.accu_delivered;
+    const accu_workdays = clickData.accu_workdays;
+    const accu_workdays_in_weekend = clickData.accu_workdays_in_weekend;
+    const seq_usage_day = parseInt(clickData.seq_usage_day)*100 + "%";
+    const seq_usage_w = parseInt(clickData.seq_usage_w)*100 + "%";
 
     content.innerHTML=`
     <div>
@@ -163,7 +172,9 @@ function fetchData() {
       <tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="2">${appsheet}</td><td colspan="2">${extra_support}</td></tr>
       <tr><td></td></tr>
       <tr><th colspan="6">配送品質</th></tr><tr><td colspan="2" class="second_title">上線時間</td><td colspan="4" class="second_title">累計上線時間</td></tr><tr><td colspan="2">${checkin}</td><td colspan="4">${working_hours}</td></tr><tr><td colspan="2" class="second_title">於建議時間前上線</td><td colspan="2" class="second_title">清空指定門市或時數達標</td><td colspan="2" class="second_title">上線所有指定門市</td></tr>
-      <tr><td colspan="2" class="last_td">${on_time}</td><td colspan="2" class="last_td">${cleaned_or_hours_hit_standard}</td><td colspan="2" class="last_td">${absent_cnt}</td></tr></table></div></li><li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵</label><div class="content"><table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr><tr><td colspan="6">'+online_bonus_summary+'</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送天數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">'+accu_delivered+'</td><td colspan="2">'+accu_online_week+'</td><td colspan="2">'+accu_online_weekend+'</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr><tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">'+seq_usagerate_day+'</td><td colspan="3" class="last_td">'+seq_usagerate_week+'</td></tr></table></div></li></ul>
+      <tr><td colspan="2" class="last_td">${on_time}</td><td colspan="2" class="last_td">${cleaned_or_hours_hit_standard}</td><td colspan="2" class="last_td">${absent_cnt}</td></tr></table></div></li><li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵</label><div class="content"><table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
+      <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送天數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr>
+      <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr></table></div></li></ul>
     </div>
     `
   }
