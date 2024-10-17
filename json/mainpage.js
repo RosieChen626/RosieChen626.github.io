@@ -17,7 +17,7 @@ const test = document.querySelector('.test');
 
 function fetchData() {
     fetch(
-      "https://script.googleusercontent.com/macros/echo?user_content_key=VJ1xr1nbKUOJzGYdnGwD-LMKzlcn8dQjuyIKcN0DHbQOHy7R5QA3hv47li0e5Z76UvMgBgPF2-sN1nztzkqfV8Nx6AtVQ1_Tm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNotpTzd4o6uBzzsHMQgjwSM5Ns1DvLXMJl7b7ekg_aWWPX_gHxgEg8K7al2S5VOErrRTM9WI93acx_QUvMlBLxKy7N2inEdedz9Jw9Md8uu&lib=MIxchE2r06uWDw2dwzgX5WQVl-wMnzYbk"
+      "https://script.google.com/macros/s/AKfycbz1MfB3vVV3hiXH7D-pwdA5AiHw8rFHBghmHW5LyG0_t6wpQXIawpE7-hCJfkmGug5c3A/exec"
     )
       .then((response) => response.json())
       .then((data) => {disPlay(data)})
@@ -59,6 +59,7 @@ function fetchData() {
           console.log(user);
           username.textContent=user;
       });
+      console.log("HI");
   }
 
   window.onload = function () {
