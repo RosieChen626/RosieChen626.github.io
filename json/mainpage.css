@@ -164,6 +164,7 @@ table{
     border-radius: 20px;
     margin-top:2px;
     text-align:center;
+    min-width: 500px;
   }
   
   th{
@@ -280,27 +281,19 @@ table{
 
  @media(max-width:500px){
     th{
-        font-size: 12px;
-        max-height: 1px;
-        width: auto;
+        font-size: 7px;
     }
     td{
-        font-size: 12px;
-        max-height: 1px;
-        width: auto;
+        font-size: 7px;
     }
   }
 
   @media(max-width:800px){
     th{
-        font-size: 13px;
-        max-height: 1px;
-        width: auto;
+        font-size: 12px;
     }
     td{
-        font-size: 13px;
-        max-height: 1px;
-        width: auto;
+        font-size: 12x;
     }
   }
 
