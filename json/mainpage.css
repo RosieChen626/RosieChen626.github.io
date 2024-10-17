@@ -278,16 +278,45 @@ table{
     visibility: visible;
   }
 
-  @media(max-width:550px){
+ @media(max-width:500px){
     th{
-        font-size: 13px;
+        font-size: 12px;
+        max-height: 1px;
+        width: auto;
     }
     td{
         font-size: 12px;
-    }
-    .second_title{
-        font-size: 12px;
+        max-height: 1px;
+        width: auto;
     }
   }
+
+  @media(max-width:800px){
+    th{
+        font-size: 13px;
+        max-height: 1px;
+        width: auto;
+    }
+    td{
+        font-size: 13px;
+        max-height: 1px;
+        width: auto;
+    }
+  }
+
+
+  @media(max-width:1015px){
+    th{
+        font-size: 15px;
+        max-height: 1px;
+        width: auto;
+    }
+    td{
+        font-size: 15px;
+        max-height: 1px;
+        width: auto;
+    }
+  }
+
 
 
