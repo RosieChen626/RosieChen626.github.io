@@ -41,8 +41,8 @@ function fetchData() {
           const is_online = filterdata.is_online_bonus;
           const message = document.createElement("div");
           message.innerHTML = `
-              <div class="box-content">
-                  <p id=${filterdata.id} onclick="getClickID(this.id,filteredData)">${date}</p>
+              <div class="box-content" id=${filterdata.id} onclick="getClickID(this.id,filteredData)">
+                  <p>${date}</p>
                   <div class="score">
                     <p class="first">${is_garantee}</p>
                     <p class="second">${is_service}</p>
@@ -134,8 +134,8 @@ function fetchData() {
     const accu_delivered = clickData.accu_delivered;
     const accu_workdays = clickData.accu_workdays;
     const accu_workdays_in_weekend = clickData.accu_workdays_in_weekend;
-    const seq_usage_day = parseInt(clickData.seq_usage_day)*100 + "%";
-    const seq_usage_w = parseInt(clickData.seq_usage_w)*100 + "%";
+    const seq_usage_day = parseFloat(clickData.seq_usage_day*100)+ "%";
+    const seq_usage_w = parseFloat(clickData.seq_usage_w*100) + "%";
 
     content.innerHTML=`
     <div>
@@ -143,10 +143,10 @@ function fetchData() {
       <li><input class="contentuse" type="radio" name="accordion" id="first_${idNum}" checked>
       <label for="first_${idNum}">保底獎勵</label>
       <div class="content">
-      <table><tr><th colspan="6" class="first_th">當日總配達顆數 (1+2+3)</th></tr>
+      <table><tr><th colspan="6" class="first_th">當日總配達顆數 [A+B+C]</th></tr>
       <tr><td colspan="6">${is_garantee_subtotal}</td></tr>
       <tr><td></td></tr>
-      <tr><th colspan="2">[1]指定門市配送顆數</th><th colspan="2">[2]保底額外獎勵顆數</th><th colspan="2">[3]支援配送件數</th></tr>
+      <tr><th colspan="2">[A]指定門市配送顆數</th><th colspan="2">[B]保底額外獎勵顆數</th><th colspan="2">[C]支援配送件數</th></tr>
       <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="2">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
       <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr>
       <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
