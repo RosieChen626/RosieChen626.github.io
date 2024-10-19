@@ -311,5 +311,16 @@ table{
     }
   }
 
+  .preview{
+    display:none
+  }
+
+  .bx-download{
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 11px;
+    margin-top: -50px;
+  }
+
 
 
