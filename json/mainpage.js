@@ -59,7 +59,6 @@ function fetchData() {
           console.log(user);
           username.textContent=user;
       });
-      console.log("HI");
   }
 
   window.onload = function () {
@@ -142,39 +141,87 @@ function fetchData() {
     content.innerHTML=`
     <div>
       <ul class="accordion">
-      <li><input class="contentuse" type="radio" name="accordion" id="first_${idNum}" checked>
-      <label for="first_${idNum}">保底獎勵(${date})</label>
-      <div class="content">
-      <table><tr><th colspan="6" class="first_th">當日總配達顆數 [A+B+C]</th></tr>
-      <tr><td colspan="6">${is_garantee_subtotal}</td></tr>
-      <tr><td></td></tr>
-      <tr><th colspan="2">[A]指定門市配送顆數</th><th colspan="2">[B]保底額外獎勵顆數</th><th colspan="2">[C]支援配送件數</th></tr>
-      <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="2">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
-      <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr>
-      <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
-      <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
-      <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
-      <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
-      <tr><td></td></tr><tr><th colspan="6">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">當日是否配合支援</td></tr>
-      <tr><td colspan="3">${smart_inbound}</td><td colspan="3">${extra_support}</td></tr>
-      <tr><td colspan="3" class="second_title">上線時間</td><td colspan="3" class="second_title">累積上線時數</td></tr>
-      <tr><td colspan="3">${checkin}</td><td colspan="3">${working_hours}</td></tr>
-      <tr><td colspan="3" class="second_title">於建議時間前上線</td><td colspan="3" class="second_title">符合配送時數</td></tr>
-      <tr><td colspan="3">${on_time}</td><td colspan="3">${cleaned_or_hours_hit_standard}</td></tr>
-      <tr><td></td></tr><tr><th colspan="6">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當周配送品質累計不佳次數</td><td colspan="3" class="second_title">當周規劃上線天數</td></tr>
-      <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="3" class="last_td">${workdays}</td></tr></table></div></li>
-      <li><input class="contentuse" type="radio" name="accordion" id="second_${idNum}"><label for="second_${idNum}">服務品質獎勵(${date})</label>
-      <div class="content"><table><tr><th colspan="6" class="first_th">服務獎勵結算</th></tr>
-      <tr><td colspan="6">${service_bonus_cnt}</td></tr><tr><td></td></tr>
-      <tr><th colspan="3">實際配送顆數</th><th colspan="3">保底加給(不提供服務獎勵)</th></tr>
-      <tr><td colspan="3">${actual_delivered}</td><td colspan="3">${garantee_bonus}</td></tr>
-      <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
-      <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
-      <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
-      <tr><th colspan="6">配送品質</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td></tr><tr><td colspan="3">${smart_inbound}</td><td colspan="3">${appsheet}</td><tr><td colspan="3" class="second_title">調度支援意願</td><td colspan="3" class="second_title">累計時數</td></tr><tr><td colspan="3" class="last_td">${extra_support}</td><td colspan="3" class="last_td">${working_hours}</td></tr>
-      </table></div></li><li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵(${date})</label><div class="content"><table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
-      <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr>
-      <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr></table></div></li></ul>
+      <div id="capture-section1_${idNum}">
+        <li><input class="contentuse" type="radio" name="accordion" id="first_${idNum}" checked>
+        <label for="first_${idNum}">保底獎勵(${date})</label>
+        <div class="content">
+        <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},1)"></i>
+        <table><tr><th colspan="6" class="first_th">當日總配達顆數 [A+B+C]</th></tr>
+        <tr><td colspan="6">${is_garantee_subtotal}</td></tr>
+        <tr><td></td></tr>
+        <tr><th colspan="2">[A]指定門市配送顆數</th><th colspan="2">[B]保底額外獎勵顆數</th><th colspan="2">[C]支援配送件數</th></tr>
+        <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="2">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
+        <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr>
+        <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
+        <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
+        <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
+        <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
+        <tr><td></td></tr><tr><th colspan="6">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">當日是否配合支援</td></tr>
+        <tr><td colspan="3">${smart_inbound}</td><td colspan="3">${extra_support}</td></tr>
+        <tr><td colspan="3" class="second_title">上線時間</td><td colspan="3" class="second_title">累積上線時數</td></tr>
+        <tr><td colspan="3">${checkin}</td><td colspan="3">${working_hours}</td></tr>
+        <tr><td colspan="3" class="second_title">於建議時間前上線</td><td colspan="3" class="second_title">符合配送時數</td></tr>
+        <tr><td colspan="3">${on_time}</td><td colspan="3">${cleaned_or_hours_hit_standard}</td></tr>
+        <tr><td></td></tr><tr><th colspan="6">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當周配送品質累計不佳次數</td><td colspan="3" class="second_title">當周規劃上線天數</td></tr>
+        <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="3" class="last_td">${workdays}</td></tr></table></div></li>
+      </div>
+      <div id="preview-container1_${idNum}" class="preview">
+        <img id="screenshot-preview1_${idNum}"/>
+      </div>
+      <div id="capture-section2_${idNum}">
+        <li><input class="contentuse" type="radio" name="accordion" id="second_${idNum}"><label for="second_${idNum}">服務品質獎勵(${date})</label>
+        <div class="content">
+        <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},2)"></i>
+        <table><tr><th colspan="6" class="first_th">服務獎勵結算</th></tr>
+        <tr><td colspan="6">${service_bonus_cnt}</td></tr><tr><td></td></tr>
+        <tr><th colspan="3">實際配送顆數</th><th colspan="3">保底加給(不提供服務獎勵)</th></tr>
+        <tr><td colspan="3">${actual_delivered}</td><td colspan="3">${garantee_bonus}</td></tr>
+        <tr><td></td></tr><tr><th colspan="6">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配達貨量</td><td class="second_title">配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
+        <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
+        <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
+        <tr><th colspan="6">配送品質</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td></tr><tr><td colspan="3">${smart_inbound}</td><td colspan="3">${appsheet}</td><tr><td colspan="3" class="second_title">調度支援意願</td><td colspan="3" class="second_title">累計時數</td></tr><tr><td colspan="3" class="last_td">${extra_support}</td><td colspan="3" class="last_td">${working_hours}</td></tr>
+        </table></div></li>
+      </div>
+      <div id="preview-container2_${idNum}" class="preview">
+        <img id="screenshot-preview2_${idNum}"/>
+      </div>
+      <div id="capture-section3_${idNum}">
+        <li><input class="contentuse" type="radio" name="accordion" id="third_${idNum}"><label for="third_${idNum}">上線獎勵(${date})</label>
+        <div class="content">
+        <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},3)"></i>
+        <table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
+        <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr>
+        <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr></table></div></li></ul>
+      </div>
+      <div id="preview-container3_${idNum}" class="preview">
+        <img id="screenshot-preview3_${idNum}"/>
+      </div>
     </div>
     `
+  }
+
+  function gatCapture(id,Num){
+      // Select the section to be captured
+      const captureSection = document.getElementById(`capture-section${Num}_${id}`);
+    
+      // Use dom-to-image to convert the section into an image
+      domtoimage.toPng(captureSection)
+        .then(function (dataUrl) {
+          // Display the screenshot preview
+          const previewContainer = document.getElementById(`preview-container${Num}_${id}`);
+          const previewImage = document.getElementById(`screenshot-preview${Num}_${id}`);
+          // previewContainer.classList.remove('hidden');
+    
+          // Set the src attribute to the data URL of the captured image
+          previewImage.src = dataUrl;
+    
+          // Enable the download functionality
+          const link = document.createElement('a');
+          link.href = dataUrl;
+          link.download = 'screenshot.png';
+          link.click();
+        })
+        .catch(function (error) {
+          console.error('Error capturing the image: ', error);
+    });
   }
