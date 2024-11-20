@@ -5,6 +5,14 @@
 	padding: 0;
 }
 
+html{
+	margin: 0;
+	padding: 0;
+	height: auto;
+        overflow-x: hidden;
+	width: 100vw;
+}
+
 body{
 	align-items: center;
 	background: #eff4ff;
