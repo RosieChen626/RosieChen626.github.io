@@ -22,7 +22,7 @@ function fetchData() {
     )
       .then((response) => response.json())
       // .then((data) => localStorage.setItem('data',JSON.stringify(data)))
-      .then((data) => console.log(data)
+      .then((data) => alert("success"))
       .catch((error) => {
         console.error("Error fetching data:", error);
         alert("Error in fetching data. Please try again.");
