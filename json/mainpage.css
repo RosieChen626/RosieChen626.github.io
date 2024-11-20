@@ -376,7 +376,7 @@ table{
     left: 120%;
     top: 87px;
     transform: translateX(-50%);
-    width: 38%;
+    width: fit-content;
     height: 40px;
     background: #fff;
     text-align: center;
