@@ -29,7 +29,7 @@ function fetchData() {
   }
 
   window.onload = function () {
-    // localStorage.removeItem('data');
+    localStorage.removeItem('data');
     fetchData();
   }
 
