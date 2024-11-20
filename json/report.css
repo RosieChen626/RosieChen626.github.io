@@ -1,186 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
 *{
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-	align-items: center;
-	background: #eff4ff;
-	display: flex;
-	justify-content: center;
-    padding: 30px;
-    
+    background: #eff4ff;
+    color: #000;
+    padding: 80px;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbx{
+    position: relative;
+    margin-top: 50px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 10px 10px gray;
 }
 
 .form{
-	background: #eff4ff;
-	border-radius: 20px;
-	box-shadow: 5px 5px 8px rgb(129, 154, 181 , 0.43), -6px -6px 10px rgb(255 255 255);
-	padding: 20px 15px;
-	position: relative;
-	text-align: center;
-	width: 100%;
-    height: auto;
+    margin-top: 25px;
 }
 
-
-.form .form-content{
-	margin:10px 15px;
-	text-align: left;
+.form-box{
+    margin-bottom: 10px;
 }
 
-.form .form-content .form-box{
-	margin-top: 30px;
-    margin-bottom: 30px;
-
-}
-
-.form .form-content .form-box label{
-	color: #0d5ffd;
-	display: block;
-	font-size: 18px;
-    font-weight: 600;
-	margin-bottom: 6px;
-}
-
-.form .form-content .form-box select{
-	background: #eff4ff;
-    border: none;
-    border-radius: 50px;
-    box-shadow:inset -2px -2px 6px rgb(59 59 59 / 18%), inset 2px 2px 6px rgb(129 154 181 / 43%);
-    color: #0d5ffd;
-    font-size: 13px;
-    height: 40px;
+select, input{
+    border-radius: 15px;
     outline: none;
+    border: 2px solid gray;
+    width:100%;
     padding: 5px 10px;
-    width: 100%;
+    margin-top: 4px;
+    cursor: pointer;
 }
 
-.form .form-content .form-box input{
-	background: #eff4ff;
+.CA{
+    width: 100%;
+    background: linear-gradient(to right, #008cff, #e100ff);
+    padding: 10px 5px;
+    border-radius: 10px;
     border: none;
-    border-radius: 50px;
-    box-shadow:inset -2px -2px 6px rgb(59 59 59 / 18%), inset 2px 2px 6px rgb(129 154 181 / 43%);
-    color: #0d5ffd;
-    font-size: 13px;
-    height: 40px;
-    outline: none;
-    padding: 5px 15px;
-    width: 100%;
-}
-
-.form .form-content .form-box input:focus
-{	
-	box-shadow:-2px -2px 6px rgb(255 255 255),
-	2px 2px 6px rgb(129 154 181 / 43%); 	
-}
-
-.form .form-content .form-box input[type="submit"]{
-	box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
-	font-weight: 600;
-	margin-top: 20px;
-    border:2px solid #0d5ffd;
-}
-
-.form .form-content .form-box input[type="submit"]:active{
-	box-shadow: -5px -5px 15px rgb(255, 255, 255), 5px 5px 20px rgb(129 154 181 / 43%);
-	color:#eff4ff;
-    background: #0d5ffd;
-	margin-top: 20px;
-}
-
-.form .form-content .form-box input::placeholder{
-	color: #A2A2A2;
-	font-size: 16px;
-}
-
-.form-forget{
-	color: #0d5ffd;
-	margin-top: 30px;
+    cursor: pointer;
     font-weight: 600;
+    color: #fff;
+    margin-top: 25px;
 }
 
-.form-forget a{
-	color: #0d5ffd;
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.formbx
-{
-	position: relative;
-	border-radius: 20px;
-	background: #eff4ff;
-	padding:20px 30px 40px 30px;
-	/**box-shadow: -5px -5px 15px rgb(255, 255, 255), 5px 5px 20px rgb(129 154 181 / 43%);***/
-    box-shadow: 0 0 6px 6px #eff4ff, 8px 8px 10px 4px rgb(129, 154, 181 , 0.43), -8px -8px 10px 4px rgb(255 255 255);
-    width: 70%;
-    min-width: 330px;
-	max-width: 450px;
-}
-.CA
-{
-    color: #eff4ff;
-	font-weight: 600;
-	font-size: 15px;
-    text-decoration: none;
-    text-align: center;
-    background: #0d5ffd;
-    border-radius: 50px;
-	box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
-	cursor: pointer;
-    width: 100%;
-    height: 40px;
-    margin-top: 30px;
-}
-.CA:active
-{
-	box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
-	background: #eff4ff;
-	color:#0d5ffd;
-}
-
-h2{
-	text-align: center;
-    color: #0d5ffd;
-    font-size: 10px;
-    margin-bottom: 27px;
-    margin-top: 15px;
-}
-
-.head{
-    font-size: 25px;
-}
-
-.clickmebtn{
-    color: black;
-	font-weight: 600;
-	font-size: 15px;
-    text-align: center;
+.instruction-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
     background: #eff4ff;
-    border-radius: 20px;
-	box-shadow: 0 0 6px 6px #eff4ff, 8px 8px 10px 4px rgb(129, 154, 181 , 0.43), -8px -8px 10px 4px rgb(255 255 255);	
-	cursor: pointer;
-    width: 91%;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: none;
+    box-shadow: 3px 3px gray;
+    color: #000;
+    padding: 5px;
+    cursor: pointer;
 }
 
-.bx-error-circle{
-    font-size: 60px;
-    color: rgb(234, 39, 87);
-    margin-bottom: 35px;
+.bxs-note{
+    color: #6383fa;
+    font-size: 22px;
 }
 
 #popup{
     position: absolute;
-    top:40%;
+    top:50%;
     left:0;
     transform: translateY(-50%) scale(0.1);
-    border: 2px solid #6383fa;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding: 10px 45px;
     display: flex;
@@ -189,7 +93,7 @@ h2{
     flex-direction: column;
     background: #fff;
     width: 100%;
-    height: 540px;
+    height: 100%;
     visibility: hidden;
     transition: all 0.05s ease-out;
     text-align: justify;
@@ -205,42 +109,23 @@ h2{
 }
 
 .popupbtn{
+    position: absolute;
     color: #0d5ffd;
 	font-weight: 600;
 	font-size: 15px;
     text-decoration: none;
-    text-align: center;
-    background: #fff;
-    border-radius: 50px;
-	box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
+    text-align: right;
 	cursor: pointer;
-    width: 100%;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    top:20px;
+    right:20px;
+    font-size: 30px;
 }
 
-.popupbtn:hover{
-    color: #eff4ff;
-    background: #0d5ffd;
+.ins p{
+    margin-bottom: 25px;
+    background: #fff;
+    margin-top: 35px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px #afc6f3;
 }
-
-@media (max-width=500) {
-	.form{
-		padding: 20px 7px;
-	}
-    .bx-chevron-left{
-        font-size: 30px;
-    }
-}
-
-.bx-chevron-left{
-    position: absolute;
-    top:25px;
-    left:20px;
-    font-size: 45px;
-    cursor: pointer;
-    box-shadow:-5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(129 154 181 / 43%);
-    border-radius: 10px;
-    margin-left: 20px;
-  }
