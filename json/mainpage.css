@@ -7,7 +7,8 @@
 
 html { 
         overflow-x: hidden; 
-	height: 100%; margin: 0; 
+	height: auto; 
+	margin: 0; 
 	padding: 0; 
 	border: none;
 	width: 99.5vw;
