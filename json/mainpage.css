@@ -15,6 +15,10 @@ body{
   overflow-y: scroll;
 }
 
+html{
+ overflow-x: hidden;
+}
+
 .top{
     height: 130px;
     display: flex;
@@ -332,10 +336,6 @@ table{
     }
     td{
         font-size: 10px;
-    }
-    body{
-      overflow-x: hidden;
-      overflow-y: scroll;
     }
   }
 
