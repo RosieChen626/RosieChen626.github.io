@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eff4ff;
+    color: #000;
+    padding: 30px;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width:50%;
+}
+
+.first{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.sec, .btn-area{
+    width: 100%;
+}
+
+.sec{
+    margin-top: 60px;
+}
+
+.btn-area{
+    margin-bottom: 15px;
+}
+
+.progress-bar{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.progress1, .progress2, .progress3{
+    position: relative;
+    /* border: 2px solid linear-gradient(to bottom right, #008cff, #e100ff); */
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50px;
+    background: #eff4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.achieve{
+    z-index: -2;
+    color: #fff;
+}
+
+.progress1::after, .progress2::after, .progress3::after{
+    content: '';
+    position: absolute;
+    min-width: 115%;
+    min-height: 115%;
+    border-radius: 50px;
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -1;
+}
+
+hr{
+    width: 30%;
+    z-index: -2;
+    background-color : linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -3;
+}
+
+.datenote{
+    text-align: left;
+    color: gray;
+    margin-bottom: 7px;
+}
+
+.datenote2{
+    font-size: 16px;
+    text-align: left;
+    color: rgb(89, 87, 87);
+    margin-bottom: 15px;
+    font-weight: 600;
+    margin-top: 7px;
+    text-align: justify;
+}
+
+.tit{
+    margin-bottom: 5px;
+}
+
+.cont{
+    font-size: 14px;
+}
+
+.daycnt{
+    width: 100%;
+    padding:20px 7px;
+    background: #fff;
+    color: #42455a;
+    text-align: center;
+    border-radius: 7px;
+}
+
+p4{
+    color:  black; 
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.daycnt p{
+    margin-top: 20px;
+    font-size: 100px;
+}
+
+.detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.smartinbound, .avghour, .seq{
+    flex-grow: 1;
+    background: #fff;
+    color: #42455a;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 7px;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+p5{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.detail p{
+    margin-top: 10px;
+}
+
+.btn-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
+    margin-top: 90px;
+    padding: 20px 5px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* .btn::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
+    width:100%;
+    height: 110%;
+    top:-3px;
+    left:0;
+    z-index: -1;
+    border-radius: 7px;
+} */
+
+.btn:hover{
+    z-index: 0;
+}
+
+@media (max-width: 1400px){
+    .container{
+        width: 100%;
+    }
+
+    .datenote2{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+.bx-gift{
+    font-size: 19px;
+}
