@@ -5,9 +5,16 @@
 	padding: 0;
 }
 
+html{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: auto;
+}
+
 body{
-	align-items: center;
-	background: #eff4ff;
+  align-items: center;
+  background: #eff4ff;
   padding: 20px 20px;
   width: 99.5vw;
   height: auto;
@@ -372,7 +379,7 @@ table{
     left: 120%;
     top: 87px;
     transform: translateX(-50%);
-    width: 45%;
+    width: 40%;
     height: 40px;
     background: #fff;
     text-align: center;
@@ -394,7 +401,7 @@ table{
 
 .popup{
   position: absolute;
-  left: 80%;
+  left: 79%;
   top: 87px;
   visibility: visible;
   transition:all 1s ease-in-out;
