@@ -333,6 +333,10 @@ table{
     td{
         font-size: 10px;
     }
+    body{
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
   }
 
   .preview{
