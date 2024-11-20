@@ -15,10 +15,9 @@ btn.addEventListener('click', ()=>{
     }
 });
 
-// "https://script.google.com/macros/s/AKfycbz1MfB3vVV3hiXH7D-pwdA5AiHw8rFHBghmHW5LyG0_t6wpQXIawpE7-hCJfkmGug5c3A/exec"
 function fetchData() {
     fetch(
-        "https://script.google.com/macros/s/AKfycbzE51_kiyo1cKCFGtZQcvbvobK6aG5fkZuZ0ab-Wa0EfnsCtJL4fpTGeMm1X7tBj24X/exec"
+        "https://script.google.com/macros/s/AKfycbz1MfB3vVV3hiXH7D-pwdA5AiHw8rFHBghmHW5LyG0_t6wpQXIawpE7-hCJfkmGug5c3A/exec"
     )
       .then((response) => response.json())
       .then((data) => localStorage.setItem('data',JSON.stringify(data)))
