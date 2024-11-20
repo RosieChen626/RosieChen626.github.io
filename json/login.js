@@ -32,5 +32,10 @@ function fetchData() {
     fetchData();
   }
 
+const goreport = document.querySelector(".goreport");
+goreport.addEventListener('click', ()=>{
+    window.location.href = `./report.html`;
+})
+
 
 
