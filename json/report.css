@@ -7,7 +7,7 @@
 body{
     background: #eff4ff;
     color: #000;
-    padding: 70px 10px;
+    padding: 70px 25px;
     height:auto;
     display: flex;
     justify-content: center;
@@ -134,4 +134,7 @@ select, input{
     .head{
         font-size: 19px;
     }
+	body{
+	padding: 30px 25px;
+	}
   }
