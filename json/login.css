@@ -6,14 +6,6 @@
  padding: 0;
 }
 
-html{
-	margin: 0;
-	padding: 0;
-	height: auto;
-        overflow-x: hidden;
-	width: 100vw;
-}
-
 body{
  background: #42455a;
  display: flex;
