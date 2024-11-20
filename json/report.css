@@ -129,3 +129,9 @@ select, input{
     padding: 3px 10px;
     box-shadow: 2px 2px #afc6f3;
 }
+
+@media(max-width:650px){
+    .head{
+        font-size: 19px;
+    }
+  }
