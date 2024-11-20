@@ -14,7 +14,13 @@
 </head>
 <body>
   <div class="formbx">
-    <h2 class="head">門市貨量回報</h2>
+    <div class="top">
+      <h2 class="head">門市貨量回報</h2>
+      <div class="instruction-btn">
+        <i class='bx bxs-note' ></i>
+        <p class="clickmebtn">填寫說明</p>
+      </div>
+    </div>
     <div class="form">
       <div class="form-content">
         <div class="form-box">
@@ -44,23 +50,21 @@
           <input  class="qtyinput" type="text" id="reportValue">
         </div>
       </div>
-      <button class="clickmebtn">填寫說明</button>
       <dev id="popup">
-        <div class="instructionbtn">
-           <i class='bx bx-error-circle'></i>
+        <i class='popupbtn bx bxs-message-square-x' ></i>
+        <div class="ins">
+          <p>1. 所有欄位皆為必填，若任一欄位留白或為亂碼將不採計該次回報。</p>
+          <p>2. 貨量異常調整僅開放於10日內完成，超過時間則不再做調整。</p>
+          <p>3. 實際貨量請直接填寫當日門市貨量，請勿自行扣除異常件。</p>
+          <p>4. 一旦查證提供不實回報，將不再採計後續回報。</p>
         </div>
-        <p>1. 所有欄位皆為必填，若任一欄位留白或為亂碼將不採計該次回報。</p>
-        <p>2. 貨量異常調整僅開放於10日內完成，超過時間則不再做調整。</p>
-        <p>3. 實際貨量請直接填寫當日門市貨量，請勿自行扣除異常件。</p>
-        <p>4. 一旦查證提供不實回報，將不再採計後續回報。</p>
-        <button class="popupbtn">確認</button>
       </dev>
     </div>
     <button class="btn CA">送出</button>
   </div>
-  <div class="back">
+  <!-- <div class="back">
     <i class='bx bx-chevron-left'></i>
-  </div>
+  </div> -->
   <script type="text/javascript" src="report.js"></script>
 
 </body>
