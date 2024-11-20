@@ -4,15 +4,16 @@ btn.addEventListener('click', ()=>{
     const loading = document.querySelector(".loading");
     loading.classList.add('transfrom');
     const searchTerm = document.getElementById('phoneNum').value;
-    for(i=0; i<=500000; i++){
+    let run = setInterval(()=>{
       setTimeout(()=>{
         const data = localStorage.getItem("data");
         if(data){
+          clearInterval(run);
           window.location.href = `./mainpage.html?phone=${searchTerm}`;
           return
         }
       },500)
-    }
+    })
 });
 
 function fetchData() {
