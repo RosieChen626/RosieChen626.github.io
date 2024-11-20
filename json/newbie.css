@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+html{
+	margin: 0;
+	padding: 0;
+	height: auto;
+        overflow-x: hidden;
+	width: 100vw;
+}
+
 body{
     background: #eff4ff;
     color: #000;
