@@ -5,7 +5,14 @@
 	padding: 0;
 }
 
-html, body{
+html { 
+        overflow: hidden; 
+	height: 100%; margin: 0; 
+	padding: 0; 
+	border: none;
+}
+
+body{
 	align-items: center;
 	background: #eff4ff;
   padding: 20px 20px;
