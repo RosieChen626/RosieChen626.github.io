@@ -82,6 +82,10 @@ body{
     font-weight: 300;
 }
 
+.active{
+  visibility: visible;
+}
+
 .user:hover .item2{
     visibility: visible;
 }
