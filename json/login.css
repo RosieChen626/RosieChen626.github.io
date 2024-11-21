@@ -179,6 +179,15 @@ hr{
  height: 100%;
 }
 
+select{
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid rgb(220, 217, 217);
+  height: 100%;
+  margin-bottom: 5px;
+}
+
 .note{
  margin-top: 15px;
  font-size: 12px;
