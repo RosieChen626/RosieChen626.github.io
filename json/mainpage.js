@@ -1,16 +1,16 @@
-// const menu = document.querySelector('.bx-menu');
-// const bar = document.querySelector('.bar');
+const menu = document.querySelector('.bx-menu');
+const bar = document.querySelector('.bar');
 
-// menu.addEventListener('click',()=>{
-//     bar.classList.toggle('active');
-// })
+menu.addEventListener('click',()=>{
+    bar.classList.toggle('active');
+})
 
-// const logout =document.querySelector('.item2');
-// const userbar = document.querySelector('.bxs-down-arrow');
+const logout =document.querySelector('.item2');
+const userbar = document.querySelector('.bxs-down-arrow');
 
-// userbar.addEventListener('click',()=>{
-//     logout.classList.toggle('active');
-// })
+userbar.addEventListener('click',()=>{
+    logout.classList.toggle('active');
+})
 
 const phoneid = new URLSearchParams(window.location.search).get("phone");
 const test = document.querySelector('.test');
