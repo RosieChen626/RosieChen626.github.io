@@ -115,5 +115,5 @@ closeppopup.addEventListener('click',()=>{
 
 const back = document.querySelector('.bx-chevron-left')
 back.addEventListener('click',()=>{
-  history.go(-1);
+  window.location.href = `./mainpage.html?phone=${searchTerm}`;
 })
