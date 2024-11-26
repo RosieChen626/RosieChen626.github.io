@@ -393,7 +393,7 @@ table{
     color:rgb(223, 83, 83);
 }
 
-.bx-error-alt{
+.bx-error-alt, .bx-message-alt-dots{
   font-size: 20px;
   margin-right: 7px;
 }
@@ -412,6 +412,34 @@ table{
   background: #008cff;
   overflow: hidden;
 }
+
+.unavailable2{
+  position: absolute;
+  left: 20px;
+  top: 99px;
+  width: 180px;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.5s ease-out;
+  visibility: hidden;
+  padding: 15px 7px;
+  color:rgb(79, 78, 78);
+}
+
+.popup2{
+  position: absolute;
+  left: 20px;
+  top: 88px;
+  visibility: visible;
+  transition:all 0.3s ease-in-out;
+}
+
 
 
 
