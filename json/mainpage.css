@@ -354,7 +354,7 @@ table{
 
 .loader {
     position: fixed;
-    left: 51%;
+    left: 50%;
     top: 50%;
     /* transform: translateX(-50%); */
     width: 35px;
