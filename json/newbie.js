@@ -110,7 +110,7 @@ function disPlay() {
 const return_btn = document.querySelector(".btn");
 
 return_btn.addEventListener('click',()=>{
-    history.back();
+    history.go(-1);
 })
 
 
