@@ -261,6 +261,7 @@ newbie.addEventListener('click', ()=>{
         clearInterval(check);
         console.log(newbiedata);
         if(newbiedata.length>0){
+          loader.style.visibility='hidden';
           window.location.href = `./newbie.html?phone=${phoneid}`
 
           return
