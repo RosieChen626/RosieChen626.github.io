@@ -110,7 +110,7 @@ function disPlay() {
 const return_btn = document.querySelector(".btn");
 
 return_btn.addEventListener('click',()=>{
-    history.go(-1);
+    window.location.href = `./mainpage.html?phone=${searchTerm}`;
 })
 
 
