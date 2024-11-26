@@ -279,3 +279,16 @@ newbie.addEventListener('click', ()=>{
       }
     })
 },500);
+
+const instruc = document.querySelector(".ins")
+const instruction = document.querySelector(".unavailable2");
+
+instruc.addEventListener('click', ()=>{
+  instruction.style.visibility='visible';
+  instruction.classList.add('popup2');
+  setTimeout(()=>{
+    instruction.classList.remove('popup2');
+    instruction.style.visibility='hidden';
+  },5000)
+})
+
