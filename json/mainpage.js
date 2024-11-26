@@ -253,7 +253,7 @@ const unavailable = document.querySelector(".unavailable");
 
 newbie.addEventListener('click', ()=>{
 
-    loader.style.visibility='visible';
+    // loader.style.visibility='visible';
     let check = setInterval(()=>{
       const newbie = JSON.parse(localStorage.getItem("newbie"));
       if(newbie){
@@ -261,13 +261,13 @@ newbie.addEventListener('click', ()=>{
         clearInterval(check);
         console.log(newbiedata);
         if(newbiedata.length>0){
-          loader.style.visibility='hidden';
+          // loader.style.visibility='hidden';
           window.location.href = `./newbie.html?phone=${phoneid}`
 
           return
 
         }else{
-          loader.style.visibility='hidden';
+          // loader.style.visibility='hidden';
           // unavailable.style.visibility='visible';
           unavailable.classList.add('popup');
           setTimeout(()=>{
