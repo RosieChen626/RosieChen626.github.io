@@ -125,6 +125,7 @@ body{
 }
 
 .formbx{
+ position: relative;
  background: #fff;
  box-shadow: 10px 10px gray;
  border-radius: 15px;
@@ -519,4 +520,44 @@ h1 {
     left: -100%;
     opacity: 0;
   }
+}
+
+.bx-wrench{
+  font-size: 28px;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.warn{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+  z-index:100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.context{
+  width: 60%;
+  margin-top: 55px;
+  text-align: center;
+}
+
+.bxs-message-square-x{
+  position: absolute;
+  top:20px;
+  right:20px;
+  font-size: 25px;
+  color: #008cff;
+  cursor: pointer;
 }
