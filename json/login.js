@@ -62,5 +62,11 @@ function filterData(data){
   })
 }
 
+const close = document.querySelector(".bxs-message-square-x");
+const warning = document.querySelector(".warn");
+close.addEventListener('click',()=>{
+  warning.style.zIndex = "-5";
+})
+
 
 
