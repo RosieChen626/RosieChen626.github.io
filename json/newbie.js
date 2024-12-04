@@ -48,7 +48,7 @@ function disPlay() {
 
       filteredData.forEach((filterdata) => {
         if(new Date(filterdata.phase1_deadline)>=new Date() && parseInt(filterdata.online_cnt_1)<40){
-            datenote2.innerHTML = `*第一階段任務: 需於${new Date(filterdata.start_datetime).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}~${new Date(filterdata.phase1_deadline).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}累計上線達40天`;
+            datenote2.innerHTML = `*第一階段任務: 需於${new Date(filterdata.start_datetime).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit"})}~${new Date(filterdata.phase1_deadline).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}累計上線達40天`;
             progress1.classList.add('achieve');
             let start_value = 0;
             let end_value = parseInt(filterdata.online_cnt_1);
@@ -60,7 +60,7 @@ function disPlay() {
                 }
             }, 35)
         }else if(new Date(filterdata.phase1_deadline)<new Date() && parseInt(filterdata.online_cnt_1)>=40 && parseInt(filterdata.online_cnt_2)<100){
-            datenote2.innerHTML =`*已完成第一階段任務，第二階段任務: 需於${new Date(filterdata.start_datetime).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}~${new Date(filterdata.phase2_deadline).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}累計上線達100天`;
+            datenote2.innerHTML =`*已完成第一階段任務，第二階段任務: 需於${new Date(filterdata.start_datetime).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}~${new Date(filterdata.phase2_deadline).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}累計上線達100天`;
             progress1.classList.add('achieve');
             progress2.classList.add('achieve');
             let start_value = 0;
@@ -73,7 +73,7 @@ function disPlay() {
                 }
             }, 35)
         }else if(new Date(filterdata.phase1_deadline)<new Date() && parseInt(filterdata.online_cnt_1)<40){
-            datenote2.innerHTML = `*未於${new Date(filterdata.start_datetime).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}~${new Date(filterdata.phase1_deadline).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }).slice(0,10)}完成第一階任務`;
+            datenote2.innerHTML = `*未於${new Date(filterdata.start_datetime).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" }).slice(0,10)}~${new Date(filterdata.phase1_deadline).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}完成第一階任務`;
             progress1.classList.add('achieve');
             let start_value = 0;
             let end_value = parseInt(filterdata.online_cnt_1);
