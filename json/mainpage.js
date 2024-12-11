@@ -1,19 +1,14 @@
 const menu = document.querySelector('.bx-menu');
 const bar = document.querySelector('.bar');
 
-menu.addEventListener('click',()=>{
-    bar.classList.toggle('active');
-})
-
 const logout =document.querySelector('.item2');
-const userbar = document.querySelector('.bxs-down-arrow');
-
-userbar.addEventListener('click',()=>{
-    logout.classList.toggle('active');
-})
 
 const phoneid = new URLSearchParams(window.location.search).get("phone");
 const test = document.querySelector('.test');
+
+menu.addEventListener('click',()=>{
+  window.location.href = `./menu.html?phone=${phoneid}`;
+})
 
 // function fetchData() {
 //     fetch(
@@ -160,8 +155,9 @@ const test = document.querySelector('.test');
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
         <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
-        <tr><td></td></tr><tr><th colspan="7">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="4" class="second_title">當日是否配合支援</td></tr>
-        <tr><td colspan="3">${smart_inbound}</td><td colspan="4">${extra_support}</td></tr>
+        <tr><td></td></tr><tr><th colspan="7">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">當日是否配合支援</td><td colspan="2" class="second_title">包裹驗收SOP</td></tr>
+        <tr><td colspan="3">${smart_inbound}</td><td colspan="2">${extra_support}</td><td colspan="2">--</td></tr><tr><td colspan="3" class="second_title">包裹遺失紀錄</td><td colspan="4" class="second_title">不實貨態紀錄</td></tr>
+        <tr><td colspan="3">--</td><td colspan="4">--</td></tr>
         <tr><td colspan="3" class="second_title">上線時間</td><td colspan="4" class="second_title">累積上線時數</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
         <tr><td colspan="3" class="second_title">於建議時間前上線</td><td colspan="4" class="second_title">符合配送時數</td></tr>
@@ -183,7 +179,8 @@ const test = document.querySelector('.test');
         <tr><td></td></tr><tr><th colspan="7">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配貨量(異常)</td><td class="second_title">門市總配送件數</td><td class="second_title">個人配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
-        <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td><tr><td colspan="7" class="second_title">累計時數</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
+        <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td>
+        <tr><tr><td colspan="2" class="second_title">包裹驗收SOP</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">累計時數</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
         </table></div></li>
       </div>
       <div id="preview-container2_${idNum}" class="preview">
@@ -195,7 +192,8 @@ const test = document.querySelector('.test');
         <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},3)"></i>
         <table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
         <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr>
-        <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr></table></div></li></ul>
+        <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr>
+        <tr><td colspan="6" class="second_title">不實貨態/遺失包裹累計次數</td></tr><tr><td colspan="6" class="last_td">--</td></tr></table></div></li></ul>
       </div>
       <div id="preview-container3_${idNum}" class="preview">
         <img id="screenshot-preview3_${idNum}"/>
@@ -247,49 +245,7 @@ function fetchDataForNewbieProgram() {
 fetchDataForNewbieProgram();
 
 const newbie = document.querySelector(".newbiepage");
-const loader = document.querySelector(".loader");
+// const loader = document.querySelector(".loader");
 const switchpage = document.querySelector('.item2');
 const unavailable = document.querySelector(".unavailable");
-
-newbie.addEventListener('click', ()=>{
-
-    // loader.style.visibility='visible';
-    let check = setInterval(()=>{
-      const newbie = JSON.parse(localStorage.getItem("newbie"));
-      if(newbie){
-        newbiedata = newbie.filter((da) => da.phone.startsWith(phoneid));
-        clearInterval(check);
-        console.log(newbiedata);
-        if(newbiedata.length>0){
-          // loader.style.visibility='hidden';
-          window.location.href = `./newbie.html?phone=${phoneid}`
-
-          return
-
-        }else{
-          // loader.style.visibility='hidden';
-          // unavailable.style.visibility='visible';
-          unavailable.classList.add('popup');
-          setTimeout(()=>{
-            // unavailable.style.visibility='hidden';
-            unavailable.classList.remove('popup');
-          },5000)
-
-          return
-        }
-      }
-    })
-},500);
-
-const instruc = document.querySelector(".ins")
-const instruction = document.querySelector(".unavailable2");
-
-instruc.addEventListener('click', ()=>{
-  instruction.style.visibility='visible';
-  instruction.classList.add('popup2');
-  setTimeout(()=>{
-    instruction.classList.remove('popup2');
-    instruction.style.visibility='hidden';
-  },5000)
-})
 
