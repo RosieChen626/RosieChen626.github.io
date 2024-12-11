@@ -228,21 +228,21 @@ menu.addEventListener('click',()=>{
     });
   }
 
-//prefetch api for newbie program page
-function fetchDataForNewbieProgram() {
-  localStorage.removeItem('newbie');
-  fetch(
-    "https://script.google.com/macros/s/AKfycbzE51_kiyo1cKCFGtZQcvbvobK6aG5fkZuZ0ab-Wa0EfnsCtJL4fpTGeMm1X7tBj24X/exec"
-  )
-    .then((response) => response.json())
-    .then((data) => localStorage.setItem('newbie',JSON.stringify(data)))
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-      alert("Error in fetching data. Please try again.");
-    });
-}
+// prefetch api for newbie program page
+// function fetchDataForNewbieProgram() {
+//   localStorage.removeItem('newbie');
+//   fetch(
+//     "https://script.google.com/macros/s/AKfycbzE51_kiyo1cKCFGtZQcvbvobK6aG5fkZuZ0ab-Wa0EfnsCtJL4fpTGeMm1X7tBj24X/exec"
+//   )
+//     .then((response) => response.json())
+//     .then((data) => localStorage.setItem('newbie',JSON.stringify(data)))
+//     .catch((error) => {
+//       console.error("Error fetching data:", error);
+//       alert("Error in fetching data. Please try again.");
+//     });
+// }
 
-fetchDataForNewbieProgram();
+// fetchDataForNewbieProgram();
 
 const newbie = document.querySelector(".newbiepage");
 // const loader = document.querySelector(".loader");
