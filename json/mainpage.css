@@ -18,7 +18,7 @@ body{
 }
 
 .top{
-    height: 130px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -45,10 +45,10 @@ body{
 
 .user{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 14px;
     color: gray;
     font-weight: 600;
 }
@@ -373,7 +373,7 @@ table{
   }
   @keyframes l4 {to{transform: rotate(1turn)}}
 
-.unavailable{
+/* .unavailable{
     position: absolute;
     right: -65px;
     top: 99px;
@@ -391,20 +391,20 @@ table{
     visibility: hidden;
     padding: 15px 7px;
     color:rgb(223, 83, 83);
-}
+} */
 
 .bx-error-alt, .bx-message-alt-dots{
   font-size: 20px;
   margin-right: 7px;
 }
 
-.popup{
+/* .popup{
   position: absolute;
   right: -65px;
   top: 88px;
   visibility: visible;
   transition:all 0.3s ease-in-out;
-}
+} */
 
 .mainpage{
   height: fit-content;
