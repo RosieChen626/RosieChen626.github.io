@@ -1,9 +1,8 @@
 const btn = document.querySelector(".CA");
 
 btn.addEventListener('click', ()=>{
-    const loading = document.querySelector(".loading");
-    loading.classList.add('transfrom');
-    // const searchTerm = document.getElementById('phoneNum').value;
+    const loader = document.querySelector(".loader");
+    btn.innerHTML=`<span class="loader"></span>`;
     let submit = setInterval(()=>{
       setTimeout(()=>{
         const data = localStorage.getItem("data");
@@ -36,11 +35,6 @@ function fetchData() {
     fetchData();
   }
 
-const goreport = document.querySelector(".goreport");
-goreport.addEventListener('click', ()=>{
-    window.location.href = `./report.html`;
-})
-
 function filterData(data){
   let run = setInterval(()=>{
     const searchtype = document.getElementById('searchtype').value;
@@ -62,11 +56,10 @@ function filterData(data){
   })
 }
 
-const close = document.querySelector(".bxs-message-square-x");
-const warning = document.querySelector(".warn");
-close.addEventListener('click',()=>{
-  warning.style.zIndex = "-5";
-})
-
+// const close = document.querySelector(".bxs-message-square-x");
+// const warning = document.querySelector(".warn");
+// close.addEventListener('click',()=>{
+//   warning.style.zIndex = "-5";
+// })
 
 
