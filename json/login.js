@@ -31,6 +31,7 @@ function fetchData() {
   }
 
   window.onload = function () {
+    localStorage.removeItem('newbie');
     localStorage.removeItem('data');
     fetchData();
   }
