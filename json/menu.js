@@ -4,6 +4,14 @@ const newbie  = document.querySelector(".newbie");
 const logout = document.querySelector(".logout");
 const back = document.querySelector(".back");
 
+
+window.onload = function () {
+  const newbie = JSON.parse(localStorage.getItem("newbie"));
+  if(!newbie){
+    fetchDataForNewbieProgram();
+  }
+}
+
 //prefetch api for newbie program page
 function fetchDataForNewbieProgram() {
   localStorage.removeItem('newbie');
@@ -17,8 +25,6 @@ function fetchDataForNewbieProgram() {
       alert("Error in fetching data. Please try again.");
     });
 }
-
-fetchDataForNewbieProgram();
 
 const phoneid = new URLSearchParams(window.location.search).get("phone");
 
