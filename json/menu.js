@@ -14,7 +14,6 @@ window.onload = function () {
 
 //prefetch api for newbie program page
 function fetchDataForNewbieProgram() {
-  localStorage.removeItem('newbie');
   fetch(
     "https://script.google.com/macros/s/AKfycbzE51_kiyo1cKCFGtZQcvbvobK6aG5fkZuZ0ab-Wa0EfnsCtJL4fpTGeMm1X7tBj24X/exec"
   )
