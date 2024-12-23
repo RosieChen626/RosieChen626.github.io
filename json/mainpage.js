@@ -160,8 +160,8 @@ menu.addEventListener('click',()=>{
         <tr><td colspan="3">--</td><td colspan="4">--</td></tr>
         <tr><td colspan="3" class="second_title">開始承攬任務時間</td><td colspan="4" class="second_title">承攬配送總時間</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
-        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當週承攬任務但未完成次數</td><td colspan="4" class="second_title">當周規劃上線天數</td></tr>
-        <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="4" class="last_td">${workdays}</td></tr></table></div></li>
+        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="7" class="second_title">當週承攬任務但未完成次數</td></tr>
+        <tr><td colspan="3" class="last_td">${attendance_record}</td></tr></table></div></li>
       </div>
       <div id="preview-container1_${idNum}" class="preview">
         <img id="screenshot-preview1_${idNum}"/>
