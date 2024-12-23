@@ -189,7 +189,7 @@ menu.addEventListener('click',()=>{
         <div class="content">
         <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},3)"></i>
         <table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
-        <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">週六、週日完成承攬任務天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">承攬任務品質</th></tr>
+        <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">承攬配送總時間</th><th colspan="2">週六、週日完成承攬任務天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">承攬任務品質</th></tr>
         <tr><td colspan="3" class="second_title">當日推薦排序取件率%</td><td colspan="3" class="second_title">當週推薦排序取件率%</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr>
         <tr><td colspan="6" class="second_title">不實貨態/遺失包裹累計次數</td></tr><tr><td colspan="6" class="last_td">--</td></tr></table></div></li></ul>
       </div>
