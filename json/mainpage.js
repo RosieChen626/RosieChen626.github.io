@@ -161,7 +161,7 @@ menu.addEventListener('click',()=>{
         <tr><td colspan="3" class="second_title">開始承攬任務時間</td><td colspan="4" class="second_title">承攬配送總時間</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
         <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="7" class="second_title">當週承攬任務但未完成次數</td></tr>
-        <tr><td colspan="3" class="last_td">${attendance_record}</td></tr></table></div></li>
+        <tr><td colspan="7" class="last_td">${attendance_record}</td></tr></table></div></li>
       </div>
       <div id="preview-container1_${idNum}" class="preview">
         <img id="screenshot-preview1_${idNum}"/>
@@ -178,7 +178,7 @@ menu.addEventListener('click',()=>{
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
         <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市上架包裹取件率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">是否支援其他門市</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td>
-        <tr><tr><td colspan="2" class="second_title">是否具備驗收證明</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">累計時數</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
+        <tr><tr><td colspan="2" class="second_title">是否具備驗收證明</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">承攬配送總時間</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
         </table></div></li>
       </div>
       <div id="preview-container2_${idNum}" class="preview">
