@@ -155,14 +155,12 @@ menu.addEventListener('click',()=>{
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned_solid}</td><td>${is_sp2_1_garantee_bonus}</td></tr>
         <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
-        <tr><td></td></tr><tr><th colspan="7">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市SOP執行率</td><td colspan="2" class="second_title">當日是否配合支援</td><td colspan="2" class="second_title">包裹驗收SOP</td></tr>
+        <tr><td></td></tr><tr><th colspan="7">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市上架包裹取件率</td><td colspan="2" class="second_title">是否支援其他門市</td><td colspan="2" class="second_title">是否具備驗收證明</td></tr>
         <tr><td colspan="3">${smart_inbound}</td><td colspan="2">${extra_support}</td><td colspan="2">--</td></tr><tr><td colspan="3" class="second_title">包裹遺失紀錄</td><td colspan="4" class="second_title">不實貨態紀錄</td></tr>
         <tr><td colspan="3">--</td><td colspan="4">--</td></tr>
-        <tr><td colspan="3" class="second_title">上線時間</td><td colspan="4" class="second_title">累積上線時數</td></tr>
+        <tr><td colspan="3" class="second_title">開始承攬任務時間</td><td colspan="4" class="second_title">承攬配送總時間</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
-        <tr><td colspan="3" class="second_title">於建議時間前上線</td><td colspan="4" class="second_title">符合配送時數</td></tr>
-        <tr><td colspan="3">${on_time}</td><td colspan="4">${cleaned_or_hours_hit_standard}</td></tr>
-        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當周配送品質累計不佳次數</td><td colspan="4" class="second_title">當周規劃上線天數</td></tr>
+        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="3" class="second_title">當週承攬任務但未完成次數</td><td colspan="4" class="second_title">當周規劃上線天數</td></tr>
         <tr><td colspan="3" class="last_td">${attendance_record}</td><td colspan="4" class="last_td">${workdays}</td></tr></table></div></li>
       </div>
       <div id="preview-container1_${idNum}" class="preview">
@@ -179,8 +177,8 @@ menu.addEventListener('click',()=>{
         <tr><td></td></tr><tr><th colspan="7">配送明細</th></tr><tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配貨量(異常)</td><td class="second_title">門市總配送件數</td><td class="second_title">個人配送件數</td><td class="second_title">是否清空</td><td class="second_title">服務獎勵</td></tr>
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
-        <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市SOP執行率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">調度支援意願</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td>
-        <tr><tr><td colspan="2" class="second_title">包裹驗收SOP</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">累計時數</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
+        <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市上架包裹取件率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">是否支援其他門市</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td>
+        <tr><tr><td colspan="2" class="second_title">是否具備驗收證明</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">累計時數</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
         </table></div></li>
       </div>
       <div id="preview-container2_${idNum}" class="preview">
@@ -191,8 +189,8 @@ menu.addEventListener('click',()=>{
         <div class="content">
         <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},3)"></i>
         <table><tr><th colspan="6" class="first_th">上線獎勵結算</th></tr>
-        <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">假日累計上線天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">任務執行品質</th></tr>
-        <tr><td colspan="3" class="second_title">當日推薦排序使用率</td><td colspan="3" class="second_title">當周推薦排序使用率</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr>
+        <tr><td colspan="6">${online_bonus_subtotal}</td></tr><tr><td></td></tr><tr><th colspan="2">當周累計配送顆數</th><th colspan="2">當周累計上線天數</th><th colspan="2">週六、週日完成承攬任務天數</th></tr><tr><td colspan="2">${accu_delivered}</td><td colspan="2">${accu_workdays}</td><td colspan="2">${accu_workdays_in_weekend}</td></tr><tr><td></td></tr><tr><th colspan="6">承攬任務品質</th></tr>
+        <tr><td colspan="3" class="second_title">當日推薦排序取件率%</td><td colspan="3" class="second_title">當週推薦排序取件率%</td></tr><tr><td colspan="3" class="last_td">${seq_usage_day}</td><td colspan="3" class="last_td">${seq_usage_w}</td></tr>
         <tr><td colspan="6" class="second_title">不實貨態/遺失包裹累計次數</td></tr><tr><td colspan="6" class="last_td">--</td></tr></table></div></li></ul>
       </div>
       <div id="preview-container3_${idNum}" class="preview">
