@@ -46,6 +46,8 @@ function disPlay() {
           da.phone.startsWith(phoneid)
       );
 
+      console.log(filteredData[0].online_cnt_1)
+
       filteredData.forEach((filterdata) => {
         if(new Date(filterdata.phase1_deadline)>=new Date() && parseInt(filterdata.online_cnt_1)<40){
             datenote2.innerHTML = `*第一階段任務: 需於${new Date(filterdata.start_datetime).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit"})}~${new Date(filterdata.phase1_deadline).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}累計上線達40天`;
@@ -59,7 +61,7 @@ function disPlay() {
                     clearInterval(day);
                 }
             }, 35)
-        }else if(new Date(filterdata.phase1_deadline)<new Date() && parseInt(filterdata.online_cnt_1)>=40 && parseInt(filterdata.online_cnt_2)<100){
+        }else if(new Date(filterdata.phase2_deadline)>=new Date() && parseInt(filterdata.online_cnt_1)>=40 && parseInt(filterdata.online_cnt_2)<100){
             datenote2.innerHTML =`*已完成第一階段任務，第二階段任務: 需於${new Date(filterdata.start_datetime).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}~${new Date(filterdata.phase2_deadline).toLocaleDateString("zh-CN", { timeZone: "Asia/Shanghai", year:"numeric", month: "2-digit", day:"2-digit" })}累計上線達100天`;
             progress1.classList.add('achieve');
             progress2.classList.add('achieve');
@@ -84,7 +86,7 @@ function disPlay() {
                     clearInterval(day);
                 }
             }, 35)
-        }else if(new Date(filterdata.phase1_deadline)<new Date() && parseInt(filterdata.online_cnt_1)>=40 && parseInt(filterdata.online_cnt_2)>=100){
+        }else if(parseInt(filterdata.online_cnt_1)>=40 && parseInt(filterdata.online_cnt_2)>=100){
             datenote2.innerHTML = `*恭喜您達成新手獎勵任務! 獎金發放請洽營運人員`;
             progress1.classList.add('achieve');
             progress2.classList.add('achieve');
