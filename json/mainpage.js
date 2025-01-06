@@ -145,10 +145,10 @@ menu.addEventListener('click',()=>{
         <label for="first_${idNum}">保底獎勵(${date})</label>
         <div class="content">
         <i class='bx bx-download' class="download_btn" onclick="gatCapture(${idNum},1)"></i>
-        <table><tr><th colspan="7" class="first_th">當日總配達顆數 [A+B+C]</th></tr>
+        <table><tr><th colspan="7" class="first_th">當日總承攬配送完成顆數 [A+B+C]</th></tr>
         <tr><td colspan="7">${is_garantee_subtotal}</td></tr>
         <tr><td></td></tr>
-        <tr><th colspan="2">[A]指定門市配送顆數</th><th colspan="3">[B]保底額外獎勵顆數</th><th colspan="2">[C]支援配送件數</th></tr>
+        <tr><th colspan="2">[A]指定門市配送顆數</th><th colspan="3">[B]保底額外獎勵顆數</th><th colspan="2">[C]非指定門市配送顆數</th></tr>
         <tr><td colspan="2">${delivered_in_assign_sp2}</td><td colspan="3">${garantee_bonus}</td><td colspan="2">${support_cnt}</td></tr>
         <tr><td></td></tr><tr><th colspan="7">配送明細</th></tr>
         <tr><td class="second_title">門市</td><td class="second_title">服務性質</td><td class="second_title">應配貨量(異常)</td><td class="second_title">門市總配送件數</td><td class="second_title">個人配送件數</td><td class="second_title">是否獨立清空</td><td class="second_title">保底任務</td></tr>
@@ -160,7 +160,7 @@ menu.addEventListener('click',()=>{
         <tr><td colspan="3">--</td><td colspan="4">--</td></tr>
         <tr><td colspan="3" class="second_title">開始承攬任務時間</td><td colspan="4" class="second_title">承攬配送總時間</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
-        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="7" class="second_title">當週承攬任務但未完成次數</td></tr>
+        <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="7" class="second_title">當週完成承攬任務天數比例</td></tr>
         <tr><td colspan="7" class="last_td">${attendance_record}</td></tr></table></div></li>
       </div>
       <div id="preview-container1_${idNum}" class="preview">
