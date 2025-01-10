@@ -119,6 +119,8 @@ menu.addEventListener('click',()=>{
     const smart_inbound = clickData.smart_inbound;
     const appsheet = clickData.appsheet;
     const extra_support = clickData.extra_support;
+    const epod = clickData.epod;
+    const lost = clickData.lost;
     
     //delivered_distinguish
     const is_garantee_subtotal = clickData.is_garantee_subtotal;
@@ -156,8 +158,8 @@ menu.addEventListener('click',()=>{
         <tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned_solid}</td><td>${is_sp2_2_garantee_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned_solid}</td><td>${is_sp2_3_garantee_bonus}</td></tr>
         <tr><td></td></tr><tr><th colspan="7">配送品質(日累計)</th></tr><tr><td colspan="3" class="second_title">智能門市上架包裹取件率</td><td colspan="2" class="second_title">是否支援其他門市</td><td colspan="2" class="second_title">是否具備驗收證明</td></tr>
-        <tr><td colspan="3">${smart_inbound}</td><td colspan="2">${extra_support}</td><td colspan="2">--</td></tr><tr><td colspan="3" class="second_title">包裹遺失紀錄</td><td colspan="4" class="second_title">不實貨態紀錄</td></tr>
-        <tr><td colspan="3">--</td><td colspan="4">--</td></tr>
+        <tr><td colspan="3">${smart_inbound}</td><td colspan="2">${extra_support}</td><td colspan="2">${epod}</td></tr><tr><td colspan="7" class="second_title">包裹遺失&不實貨態紀錄</td></tr>
+        <tr><td colspan="7">${lost}</td></tr>
         <tr><td colspan="3" class="second_title">開始承攬任務時間</td><td colspan="4" class="second_title">承攬配送總時間</td></tr>
         <tr><td colspan="3">${checkin}</td><td colspan="4">${working_hours}</td></tr>
         <tr><td></td></tr><tr><th colspan="7">配送品質(周累計)</th></tr><tr><td colspan="7" class="second_title">當週完成承攬任務天數比例</td></tr>
@@ -178,7 +180,7 @@ menu.addEventListener('click',()=>{
         <tr><td>${sp2_1}</td><td>${sp2_1_serve_type}</td><td>${sp2_1_remain_delivering_qty}</td><td>${sp2_1_clened_ttl_cnt}</td><td>${sp2_1_delivered_cnt}</td><td>${is_sp2_1_cleaned}</td><td>${is_sp2_1_service_bonus}</td></tr><tr><td>${sp2_2}</td><td>${sp2_2_serve_type}</td><td>${sp2_2_remain_delivering_qty}</td><td>${sp2_2_clened_ttl_cnt}</td><td>${sp2_2_delivered_cnt}</td><td>${is_sp2_2_cleaned}</td><td>${is_sp2_2_service_bonus}</td></tr>
         <tr><td>${sp2_3}</td><td>${sp2_3_serve_type}</td><td>${sp2_3_remain_delivering_qty}</td><td>${sp2_3_clened_ttl_cnt}</td><td>${sp2_3_delivered_cnt}</td><td>${is_sp2_3_cleaned}</td><td>${is_sp2_3_service_bonus}</td></tr><tr><td></td></tr>
         <tr><th colspan="7">配送品質</th></tr><tr><td colspan="2" class="second_title">智能門市上架包裹取件率</td><td colspan="3" class="second_title">APPSHEET滯留包裹</td><td colspan="2" class="second_title">是否支援其他門市</td></tr><tr><td colspan="2">${smart_inbound}</td><td colspan="3">${appsheet}</td><td colspan="2">${extra_support}</td>
-        <tr><tr><td colspan="2" class="second_title">是否具備驗收證明</td><td colspan="3" class="second_title">不實貨態紀錄</td><td colspan="2" class="second_title">遺失包裹紀錄</td></tr><tr><td colspan="2">--</td><td colspan="3">--</td><td colspan="2">--</td><tr><td colspan="7" class="second_title">承攬配送總時間</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
+        <tr><tr><td colspan="2" class="second_title">是否具備驗收證明</td><td colspan="5" class="second_title">不實貨態&遺失包裹紀錄</td></tr><tr><td colspan="2">${epod}</td><td colspan="5">${lost}</td><tr><td colspan="7" class="second_title">承攬配送總時間</td></tr><tr><td colspan="7" class="last_td">${working_hours}</td></tr>
         </table></div></li>
       </div>
       <div id="preview-container2_${idNum}" class="preview">
