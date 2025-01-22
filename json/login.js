@@ -40,19 +40,13 @@ function filterData(data){
   let run = setInterval(()=>{
     const searchtype = document.getElementById('searchtype').value;
     const searchTerm = document.getElementById('phoneNum').value;
-    if(searchtype==="WINDOWS/Android"){
+    if(searchTerm.length===10){
       clearInterval(run);
-      localStorage.setItem('data',JSON.stringify(data))
-      }
-    else if(searchtype==="IOS"){
-        if(searchTerm.length===10){
-          clearInterval(run);
-          filteredresult = data.filter((da) =>
-            da.rider_phone_num.startsWith(searchTerm));
-          console.log(filteredresult);
-          localStorage.setItem('data',JSON.stringify(filteredresult))
-        }
-      }
+      filteredresult = data.filter((da) =>
+        da.rider_phone_num.startsWith(searchTerm));
+      console.log(filteredresult);
+      localStorage.setItem('data',JSON.stringify(filteredresult))
+    }
     console.log(searchtype);
   })
 }
