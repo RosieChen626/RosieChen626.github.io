@@ -4,7 +4,7 @@ btn.addEventListener('click', ()=>{
     const loader = document.querySelector(".loader");
     btn.innerHTML=`<span class="loader"></span>`;
     const searchTerm = document.getElementById('phoneNum').value;
-    filteredresult = data.filter((da) => da.rider_phone_num.startsWith(searchTerm));
+    filteredresult = res_data.filter((da) => da.rider_phone_num.startsWith(searchTerm));
     console.log(filteredresult);
     localStorage.setItem('data',JSON.stringify(filteredresult))
     const data = localStorage.getItem("data");
