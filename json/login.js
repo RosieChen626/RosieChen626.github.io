@@ -40,7 +40,7 @@ function filterData(data){
   let run = setInterval(()=>{
     const searchtype = document.getElementById('searchtype').value;
     const searchTerm = document.getElementById('phoneNum').value;
-    if(searchtype!==""){
+    if(searchtype==="WINDOWS/Android"||searchtype==="IOS"){
         if(searchTerm.length===10){
           clearInterval(run);
           filteredresult = data.filter((da) =>
