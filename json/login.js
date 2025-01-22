@@ -3,17 +3,17 @@ const btn = document.querySelector(".CA");
 btn.addEventListener('click', ()=>{
     const loader = document.querySelector(".loader");
     btn.innerHTML=`<span class="loader"></span>`;
-    let submit = setInterval(()=>{
-      setTimeout(()=>{
-        const data = localStorage.getItem("data");
-        if(data){
-          clearInterval(submit);
-          const searchTerm = document.getElementById('phoneNum').value;
-          window.location.href = `./mainpage.html?phone=${searchTerm}`;
-          return
-        }
-      },500)
-    })
+    const searchTerm = document.getElementById('phoneNum').value;
+    filteredresult = data.filter((da) => da.rider_phone_num.startsWith(searchTerm));
+    console.log(filteredresult);
+    localStorage.setItem('data',JSON.stringify(filteredresult))
+    const data = localStorage.getItem("data");
+    if(data){
+      clearInterval(submit);
+      const searchTerm = document.getElementById('phoneNum').value;
+      window.location.href = `./mainpage.html?phone=${searchTerm}`;
+      return
+    }
 });
 
 function fetchData() {
@@ -22,7 +22,7 @@ function fetchData() {
     )
       .then((response) => response.json())
       .then((data) => {
-        filterData(data);
+        const res_data = data
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -36,22 +36,20 @@ function fetchData() {
     fetchData();
   }
 
-function filterData(data){
-  let run = setInterval(()=>{
-    const searchtype = document.getElementById('searchtype').value;
-    const searchTerm = document.getElementById('phoneNum').value;
-    if(searchtype==="WINDOWS/Android"||searchtype==="IOS"){
-        if(searchTerm.length===10){
-          clearInterval(run);
-          filteredresult = data.filter((da) =>
-            da.rider_phone_num.startsWith(searchTerm));
-          console.log(filteredresult);
-          localStorage.setItem('data',JSON.stringify(filteredresult))
-        }
-    }
-    console.log(searchtype);
-  })
-}
+// function filterData(data){
+//   let run = setInterval(()=>{
+//     const searchtype = document.getElementById('searchtype').value;
+//     const searchTerm = document.getElementById('phoneNum').value;
+//     if(searchTerm.length===10){
+//       clearInterval(run);
+//       filteredresult = data.filter((da) =>
+//         da.rider_phone_num.startsWith(searchTerm));
+//       console.log(filteredresult);
+//       localStorage.setItem('data',JSON.stringify(filteredresult))
+//     }
+//     console.log(searchtype);
+//   })
+// }
 
 // const close = document.querySelector(".bxs-message-square-x");
 // const warning = document.querySelector(".warn");
