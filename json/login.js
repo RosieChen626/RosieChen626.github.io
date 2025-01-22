@@ -9,8 +9,6 @@ btn.addEventListener('click', ()=>{
     localStorage.setItem('data',JSON.stringify(filteredresult))
     const data = localStorage.getItem("data");
     if(data){
-      clearInterval(submit);
-      const searchTerm = document.getElementById('phoneNum').value;
       window.location.href = `./mainpage.html?phone=${searchTerm}`;
       return
     }
