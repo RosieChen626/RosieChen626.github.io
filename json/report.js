@@ -94,7 +94,7 @@ const county_box = document.querySelector('#nameValue');
 const district_box = document.querySelector('#phoneValue');
 let selected_county;
 
-for(let i=0; i>=-9; i--) {
+for(let i=0; i>=-14; i--) {
   date_box.innerHTML += `<option value="${AddDate(i)}">${AddDate(i)}</option>`;
 };
 
